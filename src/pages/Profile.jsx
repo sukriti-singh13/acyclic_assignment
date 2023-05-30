@@ -64,7 +64,7 @@ const Profile = () => {
                 >
                   <h1
                     className={`${currentMonth ? "" : "text-slate-600"} ${
-                      today ? "bg-red-600 text-white" : ""
+                      today ? "bg-red-600 text-black" : ""
                     } ${
                       selectDate.toDate().toDateString() ===
                       date.toDate().toDateString()
