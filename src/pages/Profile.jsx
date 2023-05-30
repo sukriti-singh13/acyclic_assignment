@@ -12,7 +12,7 @@ const Profile = () => {
   return (
     <div className="px-[3rem] py-[3rem]">
       <h1 className="text-white capitalize text-2xl">Hey {profileName} !</h1>
-      <div className=" bg-white w-90 h-90 rounded-md my-[3rem]">
+      <div className=" bg-white/40 backdrop-blur-md border-white/20 border w-90 h-90 rounded-md my-[3rem]">
         <div className="  p-[1rem] flex justify-between items-center">
           <h1 className="select-none font-semibold">
             {months[today.month()]}, {today.year()}
@@ -25,7 +25,7 @@ const Profile = () => {
               }}
             />
             <h1
-              className=" cursor-pointer hover:scale-105 transition-all"
+              className=" cursor-pointer hover:scale-105 transition-all "
               onClick={() => {
                 setToday(currentDate);
               }}
@@ -46,7 +46,7 @@ const Profile = () => {
             return (
               <h1
                 key={index}
-                className="text-sm h-14 grid place-content-center text-gray-500 select-none"
+                className="text-sm h-14 grid place-content-center text-white select-none"
               >
                 {day}
               </h1>
@@ -63,14 +63,14 @@ const Profile = () => {
                   className="p-2 text-center h-14 grid place-content-center text-sm border-t"
                 >
                   <h1
-                    className={`${currentMonth ? "" : "text-gray-400"} ${
+                    className={`${currentMonth ? "" : "text-slate-600"} ${
                       today ? "bg-red-600 text-white" : ""
                     } ${
                       selectDate.toDate().toDateString() ===
                       date.toDate().toDateString()
-                        ? "bg-black text-white"
-                        : ""
-                    } h-10 w-10 rounded-full grid place-content-center hover:bg-black hover:text-white transition-all cursor-pointer select-none`}
+                        ? "bg-white text-black"
+                        : "text-black "
+                    } h-10 w-10 rounded-full grid place-content-center hover:bg-white hover:text-black transition-all cursor-pointer select-none`}
                     onClick={() => {
                       setSelectDate(date);
                     }}
